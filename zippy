@@ -1,0 +1,15 @@
+#!/bin/bash
+
+d="$1"
+
+feh \
+   --cycle-once \
+   -d --draw-tinted \
+   --action "echo %F >> skipped.txt" \
+   --action1 "echo %F,1 >> labels.txt" \
+   --action2 "echo %F,2 >> labels.txt" \
+   --recursive \
+   --randomize \
+   --auto-zoom \
+   --draw-actions \
+   $d
